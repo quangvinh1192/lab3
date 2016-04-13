@@ -12,7 +12,7 @@ public class JUnit_test extends ActivityInstrumentationTestCase2<MainActivity>{
     public JUnit_test(){
         super(MainActivity.class);
     }
-    public void tes_first(){
+    public void test_first(){
         mainActivity = getActivity();
 
         TextView textView =(TextView) mainActivity.findViewById(R.id.tv1);
