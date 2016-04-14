@@ -12,9 +12,40 @@
     tools:context="com.example.admin_me.lab3.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:id="@+id/tv1"
+
+    <EditText
+        android:layout_width="135dp"
+        android:layout_height="75dp"
+        android:id="@+id/editText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="1st Number"
+        android:layout_marginTop="75dp" />
+
+    <EditText
+        android:layout_width="135dp"
+        android:layout_height="75dp"
+        android:id="@+id/editText2"
+        android:hint="2nd Number"
+        android:layout_below="@+id/editText"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Add"
+        android:id="@+id/button"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/textView"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

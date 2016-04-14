@@ -8,8 +8,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
+    private EditText firstNum;
+    private EditText secondNum;
+    private Button addBut;
+    private TextView result;
+
+    private int sum2Number(int a, int b){
+        return a+b;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +38,26 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        firstNum = (EditText) findViewById(R.id.editText);
+        secondNum = (EditText) findViewById(R.id.editText2);
+        addBut = (Button) findViewById(R.id.button);
+        result= (TextView) findViewById(R.id.textView);
+
+        addBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String firstNumber= null;
+                String secondNumber= null;
+                firstNumber = firstNum.getText().toString();
+                secondNumber= secondNum.getText().toString();
+                if(!firstNumber.isEmpty() && !secondNumber.isEmpty()){
+                    result.setText(String.valueOf(sum2Number(Integer.parseInt(firstNumber),
+                    Integer.parseInt(secondNumber))));
+                }
+            }
+        });
+
     }
 
     @Override
