@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button addBut;
     private TextView result;
 
-    private int sum2Number(int a, int b){
+    public static int sum2Number(int a, int b){
         return a+b;
     }
 
